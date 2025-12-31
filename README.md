@@ -6,7 +6,7 @@ This project provides ESPHome-based replacement firmware and hardware modificati
 
 The hardware modification involves designing a custom PCB that serves as a drop-in replacement for the original controller board, allowing easy installation without extensive wires to solder. The firmware is built using ESPHome, providing robust WiFi connectivity and support for future Zigbee upgrades if desired.
 
-![Original Lumary Controller Setup](images/AllParts.jpg.jpg)
+![Original Lumary Controller Setup](images/AllParts.jpg)
 
 ## Features
 
@@ -56,12 +56,6 @@ The hardware modification involves designing a custom PCB that serves as a drop-
 ![Custom ESP32-C6 PCB Replacement](images/OldCBU.jpg)
 ![Custom ESP32-C6 PCB Replacement](images/custom_pcb.jpg)
 
-## Usage
-
-Once flashed and configured:
-- Control the gimbal lighting directly through the ESPHome dashboard
-- Integrate with Home Assistant for automation, scenes, and voice control
-- Adjust gimbal direction and lighting parameters independently
 
 ## Disclaimer
 
