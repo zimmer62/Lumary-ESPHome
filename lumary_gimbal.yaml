@@ -1,0 +1,121 @@
+esphome:
+  name: "mud-room-accent-1"
+  friendly_name: Mud Room Accent 1
+esp32:
+  board: esp32-c6-devkitc-1
+  variant: esp32c6
+  framework:
+    type: esp-idf
+# Enable logging
+logger:
+# Enable Home Assistant API
+api:
+  encryption:    
+    key: !secret esphome_api_key
+ota:
+  - platform: esphome
+    password: !secret ota_password
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: !secret fallback_ssid
+    password: !secret fallback_password
+captive_portal:
+
+# -----------------------------
+#   OUTPUTS (PWM)
+# -----------------------------
+output:
+  - platform: ledc
+    id: output_cold
+    pin: 1            # D0 → GPIO0
+    frequency: 10000 Hz
+  - platform: ledc
+    id: output_warm
+    pin: 21            # D1 → GPIO1
+    frequency: 10000 Hz
+
+# -----------------------------
+#   LIGHTS (CWWW + RGB LED strip)
+# -----------------------------
+light:
+  - platform: cwww
+    id: light_cwww
+    name: "Light"
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2700 K
+    cold_white: output_cold
+    warm_white: output_warm
+  - platform: esp32_rmt_led_strip
+    id: rgb_light_id
+    name: "RGB Accent"
+    chipset: SK6812
+    rgb_order: RGB
+    pin: 0              # D3 → GPIO21 (SAFE pin for timing LEDs)
+    num_leds: 12
+    gamma_correct: 1.0
+    color_correct: [100%, 100%, 100%]
+    effects:
+      # Built-in effects
+      - random:
+          name: Random Colors
+          transition_length: 5s
+          update_interval: 3s
+      - strobe:
+          name: Strobe
+          colors:
+            - state: True
+              brightness: 100%
+              red: 100%
+              green: 0%
+              blue: 0%
+              duration: 500ms
+            - state: True
+              brightness: 100%
+              red: 0%
+              green: 0%
+              blue: 100%
+              duration: 500ms
+      - addressable_rainbow:
+          name: Rainbow Effect
+          speed: 10
+          width: 50
+      - addressable_scan:
+          name: Scan Effect
+          move_interval: 50ms
+      - addressable_twinkle:
+          name: Twinkle Effect
+          twinkle_probability: 5%
+      # Circular effect
+      - addressable_lambda:
+          name: Circular
+          update_interval: 100ms
+          lambda: |-
+            static int position = 0;
+            auto current_state = id(rgb_light_id).current_values;
+            auto light_color = esphome::Color(
+              current_state.get_red() * 255,
+              current_state.get_green() * 255,
+              current_state.get_blue() * 255
+            );
+            it.all() = esphome::Color(0, 0, 0);
+            it[position] = light_color;
+            position = (position + 1) % it.size();
+      # Dual-circle effect
+      - addressable_lambda:
+          name: Circular Dual
+          update_interval: 100ms
+          lambda: |-
+            static int position = 0;
+            auto current_state = id(rgb_light_id).current_values;
+            auto light_color = esphome::Color(
+              current_state.get_red() * 255,
+              current_state.get_green() * 255,
+              current_state.get_blue() * 255
+            );
+            it.all() = esphome::Color(0, 0, 0);
+            it[position] = light_color;
+            int opposite_position = (position + it.size() / 2) % it.size();
+            it[opposite_position] = light_color;
+            position = (position + 1) % it.size();
