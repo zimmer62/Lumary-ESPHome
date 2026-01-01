@@ -2,6 +2,8 @@
 
 This directory contains 3D printable files for enclosures and mounting hardware.
 
+![3D Printed Enclosure](../../images/3d_print.png)
+
 ## Files
 
 - **ESP32C6UpgradeBox.3mf** - Enclosure for the ESP32-C6 daughterboard
