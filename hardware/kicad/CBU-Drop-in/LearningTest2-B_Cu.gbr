@@ -1,0 +1,106 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,9.0.5*%
+%TF.CreationDate,2025-11-15T13:23:46-05:00*%
+%TF.ProjectId,LearningTest2,4c656172-6e69-46e6-9754-657374322e6b,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 9.0.5) date 2025-11-15 13:23:46*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 Aperture macros list*
+%AMRoundRect*
+0 Rectangle with rounded corners*
+0 $1 Rounding radius*
+0 $2 $3 $4 $5 $6 $7 $8 $9 X,Y pos of 4 corners*
+0 Add a 4 corners polygon primitive as box body*
+4,1,4,$2,$3,$4,$5,$6,$7,$8,$9,$2,$3,0*
+0 Add four circle primitives for the rounded corners*
+1,1,$1+$1,$2,$3*
+1,1,$1+$1,$4,$5*
+1,1,$1+$1,$6,$7*
+1,1,$1+$1,$8,$9*
+0 Add four rect primitives between the rounded corners*
+20,1,$1+$1,$2,$3,$4,$5,0*
+20,1,$1+$1,$4,$5,$6,$7,0*
+20,1,$1+$1,$6,$7,$8,$9,0*
+20,1,$1+$1,$8,$9,$2,$3,0*%
+G04 Aperture macros list end*
+%TA.AperFunction,CastellatedPad*%
+%ADD10RoundRect,0.150000X-0.600000X-0.350000X0.600000X-0.350000X0.600000X0.350000X-0.600000X0.350000X0*%
+%TD*%
+%TA.AperFunction,CastellatedPad*%
+%ADD11RoundRect,0.150000X-0.350000X1.650000X-0.350000X-1.650000X0.350000X-1.650000X0.350000X1.650000X0*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,U1,1,P14/SPI_SCK*%
+%TO.N,unconnected-(U1-P14{slash}SPI_SCK-Pad1)*%
+X100200000Y-105650000D03*
+%TO.P,U1,2,P16/SPI_MOSI*%
+%TO.N,Net-(J2-Pin_5)*%
+X100200000Y-107050000D03*
+%TO.P,U1,3,P20*%
+%TO.N,unconnected-(U1-P20-Pad3)*%
+X100200000Y-108450000D03*
+%TO.P,U1,4,P22*%
+%TO.N,unconnected-(U1-P22-Pad4)*%
+X100200000Y-109850000D03*
+%TO.P,U1,5,ADC*%
+%TO.N,unconnected-(U1-ADC-Pad5)*%
+X100200000Y-111250000D03*
+%TO.P,U1,6,RX2*%
+%TO.N,unconnected-(U1-RX2-Pad6)*%
+X100200000Y-112650000D03*
+%TO.P,U1,7,TX2*%
+%TO.N,unconnected-(U1-TX2-Pad7)*%
+X100200000Y-114050000D03*
+D11*
+%TO.P,U1,8,P8*%
+%TO.N,Net-(J2-Pin_4)*%
+X102700000Y-118850000D03*
+%TO.P,U1,9,P7*%
+%TO.N,Net-(J2-Pin_3)*%
+X104500000Y-118850000D03*
+%TO.P,U1,10,P6*%
+%TO.N,unconnected-(U1-P6-Pad10)*%
+X106300000Y-118850000D03*
+%TO.P,U1,11,P26*%
+%TO.N,unconnected-(U1-P26-Pad11)*%
+X108100000Y-118850000D03*
+%TO.P,U1,12,P24*%
+%TO.N,unconnected-(U1-P24-Pad12)*%
+X109900000Y-118850000D03*
+%TO.P,U1,13,GND*%
+%TO.N,Net-(J2-Pin_2)*%
+X111700000Y-118850000D03*
+%TO.P,U1,14,3V3*%
+%TO.N,Net-(J2-Pin_1)*%
+X113500000Y-118850000D03*
+D10*
+%TO.P,U1,15,TX1*%
+%TO.N,unconnected-(U1-TX1-Pad15)*%
+X116000000Y-114050000D03*
+%TO.P,U1,16,RX1*%
+%TO.N,unconnected-(U1-RX1-Pad16)*%
+X116000000Y-112650000D03*
+%TO.P,U1,17,P28*%
+%TO.N,unconnected-(U1-P28-Pad17)*%
+X116000000Y-111250000D03*
+%TO.P,U1,18,~{CEN}*%
+%TO.N,unconnected-(U1-~{CEN}-Pad18)*%
+X116000000Y-109850000D03*
+%TO.P,U1,19,P9*%
+%TO.N,unconnected-(U1-P9-Pad19)*%
+X116000000Y-108450000D03*
+%TO.P,U1,20,P17/SPI_MISO*%
+%TO.N,unconnected-(U1-P17{slash}SPI_MISO-Pad20)*%
+X116000000Y-107050000D03*
+%TO.P,U1,21,P15/SPI_CS*%
+%TO.N,unconnected-(U1-P15{slash}SPI_CS-Pad21)*%
+X116000000Y-105650000D03*
+%TD*%
+M02*

@@ -20,12 +20,11 @@ The hardware modification involves designing a custom PCB that serves as a drop-
 ## Repository Structure
 
 - [`lumary_gimbal.yaml`](lumary_gimbal.yaml) - ESPHome configuration file for the Lumary gimbal lights
-- `hardware/` - KiCad PCB design files and Gerber exports
-  - `kicad/` - KiCad project files
-    - `lumary_pcb.kicad_pcb` - PCB layout
-    - `lumary_schematic.kicad_sch` - Schematic
-  - `gerber/` - Manufacturing files
-- `3d_models/` - 3D printable enclosure files (STL, OBJ formats)
+- `hardware/` - Hardware design files
+  - `kicad/` - KiCad PCB design files
+    - `CBU-Drop-in/` - Drop-in replacement PCB for original CBU (LearningTest2 files)
+    - `CBU-Replacement-Daughterboard/` - Satellite board with ESP32-C6
+  - `3d_models/` - 3D printable enclosure files (STL, OBJ formats)
 - `images/` - Screenshots and diagrams
 - `README.md` - This file
 
