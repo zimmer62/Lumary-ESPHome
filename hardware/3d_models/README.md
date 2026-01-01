@@ -6,7 +6,9 @@ This directory contains 3D printable files for enclosures and mounting hardware.
 
 ## Files
 
-- **ESP32C6UpgradeBox.3mf** - Enclosure for the ESP32-C6 daughterboard
+- **ESP32C6UpgradeBox.3mf** - Ready-to-print 3MF file for the ESP32-C6 daughterboard enclosure
+- **ESP32C6UpgradeBox.f3d** - Autodesk Fusion 360 source file (editable)
+- **ESP32C6UpgradeBox.step** - STEP file for CAD compatibility and modification
 
 ## Printing Recommendations
 
