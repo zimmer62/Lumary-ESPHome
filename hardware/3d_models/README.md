@@ -15,7 +15,9 @@ This directory contains 3D printable files for enclosures and mounting hardware.
 - Layer height: 0.2mm
 - Infill: 20-30%
 - Material: PLA or PETG
-- Supports: May be required depending on design
+- Supports: Not Needed
+- It's a pretty tight fit.
+
 
 ## Contributing
 
