@@ -47,14 +47,14 @@ The hardware modification involves designing a custom PCB that serves as a drop-
 3. **Remove Stock CBU**: Locate and desolder the original microcontroller.
 4. **Solder ESP32 and connectors**: Solder the connector to the drop-in board, and solder the ESP32 and a connector to the satellite board.
 5. **Install Drop-In PCB**: Replace the original board with the custom [ESP32-C6](images/original_post.jpg) PCB designed for this project. The PCB is engineered as a drop-in replacement with matching pinouts.  
-6. **3D print enclosure**: Print and install the ESP32 into the 3D-printed enclosure.
+6. **3D print enclosure**: Print and install the ESP32 into the [3D-printed enclosure](hardware/3d_models).
 7. **Connect the two boards**: Connect the two boards using the cable.
 8. **Cut wire notch**: In the plastic case where the original controller was housed, notch out a space for the wires (e.g., using diagonal snips).
 9. **Reassemble**: Put the case back together securely.
 
 ![Custom ESP32-C6 PCB Replacement](images/OldCBU.jpg)
 ![Custom ESP32-C6 PCB Replacement](images/custom_pcb.jpg)
-
+![3D file](images/3d_print.png)
 
 ## Disclaimer
 
