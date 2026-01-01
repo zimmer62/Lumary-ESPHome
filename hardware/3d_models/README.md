@@ -1,16 +1,15 @@
 # 3D Models
 
-This directory will contain 3D printable files for enclosures and mounting hardware.
+This directory contains 3D printable files for enclosures and mounting hardware.
 
-## Planned Files
+## Files
 
-- ESP32-C6 daughterboard enclosure (STL)
-- Mounting brackets and clips
-- Cable management accessories
+- **ESP32C6UpgradeBox.3mf** - Enclosure for the ESP32-C6 daughterboard
 
 ## Printing Recommendations
 
-When files are added, recommended print settings will be:
+- Lay pieces on bed appropriately.
+
 - Layer height: 0.2mm
 - Infill: 20-30%
 - Material: PLA or PETG
@@ -19,3 +18,4 @@ When files are added, recommended print settings will be:
 ## Contributing
 
 If you design or improve upon the enclosures, please consider contributing your STL files back to this project!
+
